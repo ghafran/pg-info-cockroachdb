@@ -1,6 +1,6 @@
 {
   "name": "pg-info-cockroachdb",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Grabs metadata from a PostgreSQL database",
   "author": "Ghafran Abbas",
   "homepage": "https://github.com/ghafran/pg-info-cockroachdb",
@@ -18,19 +18,20 @@
     "url": "https://github.com/ghafran/pg-info-cockroachdb/issues"
   },
   "main": "./lib/index.js",
+  "dependencies": {},
   "devDependencies": {
-    "@semantic-release/changelog": "5.0.1",
-    "@semantic-release/git": "9.0.0",
-    "@wmfs/hl-pg-client": "1.27.0",
-    "chai": "4.3.4",
+    "chai": "4.3.6",
     "chai-subset": "1.6.0",
-    "codecov": "3.8.1",
+    "codecov": "3.8.3",
     "conventional-changelog-metahub": "4.0.1",
     "cz-conventional-changelog": "3.3.0",
-    "mocha": "8.3.2",
+    "mocha": "9.2.0",
     "nyc": "15.1.0",
-    "semantic-release": "17.4.2",
-    "standard": "16.0.3"
+    "semantic-release": "19.0.2",
+    "standard": "16.0.4",
+    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/git": "10.0.1",
+    "@wmfs/hl-pg-client": "1.29.0"
   },
   "scripts": {
     "lint": "standard",
@@ -44,7 +45,6 @@
     }
   },
   "publishConfig": {
-    "cache": "cache/.npm",
     "access": "public"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "pg-info-cockroachdb",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Grabs metadata from a PostgreSQL database",
   "author": "Ghafran Abbas",
   "homepage": "https://github.com/ghafran/pg-info-cockroachdb",

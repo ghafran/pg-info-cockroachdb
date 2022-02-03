@@ -25,22 +25,22 @@ remove
 triggers: findTriggers(pgTriggers, schemaName, tableName),
 ```
 
-add after
+remove
 ```
-  const pgSchemas = queryResults[0]
-  const pgTables = queryResults[1]
-  const pgColumns = queryResults[2]
-  const pgPkColumns = queryResults[3]
-  const pgIndexes = queryResults[4]
-  const pgFkConstraints = queryResults[5]
-  const pgFunctions = queryResults[6]
-  const pgViews = queryResults[7]
-``` 
+triggers: findTriggers(pgTriggers, schemaName, viewName),
 ```
-  for (const pgi of pgIndexes){
-    pgi.index_keys = pgi.index_keys.replace('{', '').replace('}', '').split(',');
-  }
+
+replace
 ```
+function findIndexes (pgIndexes, schemaName, tableName) {
+  return pgIndexes
+    .filter(index => index.table_name === `${schemaName}.${tableName}`)
+```
+with 
+```
+.filter(index => index.table_name === `${tableName}`)
+```
+
 
 # queries.js
 remove
